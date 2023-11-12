@@ -919,9 +919,6 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.footer__icon {
-  width: 5.2rem;
-}
 
 [data-section] > * {
   -webkit-transform: translateY(10rem);
