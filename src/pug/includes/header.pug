@@ -1,0 +1,17 @@
+header.header
+  .container-fluid
+    .header__inner(data-header)
+      .burger-btn(data-nav-toggler)
+        span
+        span
+        span
+      a.header__logo(href="#")
+        img(src="images/icons/logo_site-logo.svg" alt="")
+      button.header__help(type="button" data-tooltip)
+        img(src="images/icons/ic_help.svg" alt="")
+        .tooltip
+          span.tooltip__triangle
+          .tooltip__content
+            p.tooltip__text Тел. поддержка
+            p.tooltip__title 8 800 123-45-67
+            a.tooltip__link(href="#") Написать письмо

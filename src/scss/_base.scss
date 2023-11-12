@@ -1,0 +1,62 @@
+html {
+  /* 10px / 16px(по умолчанию) = 0.625 -> 62.5% = 10px => 1rem */
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  color: var(--black);
+  font-size: var(--font-size-16);
+  font-family: var(--font-family);
+  line-height: var(--line-height-24);
+  background: var(--white);
+}
+
+a {
+  color: var(--blue);
+}
+
+.container-fluid {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.container {
+  position: relative;
+  width: 96rem;
+  margin: 0 auto;
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.backdrop,
+.backdrop-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  transition: var(--transition-05);
+  pointer-events: none;
+
+  &.active {
+    z-index: 5;
+    background: var(--black_15);
+    pointer-events: all;
+  }
+}
+
+.backdrop-modal {
+  z-index: 5;
+
+  &.active {
+    background: rgba(#000, 0.8);
+  }
+}

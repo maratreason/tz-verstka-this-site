@@ -1,0 +1,63 @@
+doctype html
+html
+	head
+		link(rel="preconnect" href="https://fonts.googleapis.com")
+		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap")
+		link(href="css/main.min.css" rel="stylesheet")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel="icon" href="favicon.ico" type="image/svg+xml")
+		title This site
+
+	body(id="top")
+		block content
+			.mobile-navigation(data-navbar)
+				.mobile-navigation__block.mobile-navigation__block--top
+					img.mobile-navigation__img(src="images/icons/logo_site-logo.svg" alt="")
+					span.mobile-navigation__close(data-nav-toggler) &times;
+				.mobile-navigation__block.mobile-navigation__block--menu
+					ul.mobile-navigation__list
+						li.mobile-navigation__item
+							a.mobile-navigation__link(href="#section-item-1" data-nav-link) Штрафы
+						li.mobile-navigation__item
+							a.mobile-navigation__link(href="#section-item-2" data-nav-link) Судебные задолженности
+						li.mobile-navigation__item
+							a.mobile-navigation__link(href="#section-item-3" data-nav-link) Налоги
+						li.mobile-navigation__item
+							a.mobile-navigation__link(href="#section-item-4" data-nav-link) Услуги
+						li.mobile-navigation__item
+							a.mobile-navigation__link(href="#" data-nav-link) О компании
+						li.mobile-navigation__item
+							a.mobile-navigation__link(href="#" data-nav-link) Контакты
+
+					ul.mobile-navigation__list.mobile-navigation__list
+						li.mobile-navigation__item
+							.mobile-navigation__link(data-modal-trigger data-nav-link) Войти
+						li.mobile-navigation__item
+							.mobile-navigation__link(data-modal-trigger data-nav-link) Зарегистрироваться
+
+			.modal(data-modal)
+				.modal__close(data-modal-close)
+					img.modal__close-img(src="images/icons/ic_close.png" alt="close icon")
+				.modal-inner
+					h2.modal__title Введите логин и пароль для входа в Личный кабинет
+					.modal__block
+						form.modal__form.form
+							.form-group
+								label.form__label
+								input.form__input.input(type="text" placeholder="Логин")
+							.form-group
+								label.form__label
+								input.form__input.input(type="text" placeholder="Пароль")
+							button.modal__submit.btn.btn-primary(type="submit") Войти
+					.modal__block
+						a.link(href="#password") Напомнить пароль
+						a.link(href="#registration") Регистрация
+
+			.backdrop(data-overlay)
+
+			.backdrop-modal(data-backdrop)
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js")
+		script(src="js/main.js")

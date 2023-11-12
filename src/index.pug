@@ -1,0 +1,184 @@
+extends pug/base.pug
+
+append content
+  include pug/includes/header.pug
+
+  main.main(id="main")
+    section.section-hero(data-section)
+      .container
+        .section-hero__inner
+          form.section-hero__form.form
+            .form-group
+              label.form__label Поиск начислений
+              input.form__input.input(type="text" placeholder="Введите данные для поиска")
+              img.form__search-icon(src="images/icons/ic_search.svg" alt="")
+            button.form__btn.btn.btn-red Найти
+          p.section-hero__text Чем больше параметров введено, тем полнее результаты поиска
+
+    section.section-navigate(data-section)
+      .container
+        .section-navigate__inner
+          h1.section-navigate__title
+            span.section-navigate__title-desctop Здесь можно оплатить
+            span.section-navigate__title-mobile Узнайте как оплатить
+          ul.section-navigate__list(data-accordion)
+            li.section-navigate__item(data-accordion-id="1")
+              .section-navigate__header
+                img.section-navigate__icon(src="images/icons/ic_gibdd1.svg" alt="")
+                a.section-navigate__link(href="#section-item-1") Штрафы ГИБДД
+                span.section-navigate__arrow
+
+              .section-navigate__content(data-accordion-content="1")
+                .section-item__content
+                  .section-item__block
+                    .section-item__block-text.
+                      Для поиска укажите номера водительского удостоверения и свидетельства о
+                      регистрации ТС или номер штрафа.
+                    .section-item__block-text.
+                      Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты
+                      самостоятельно.
+                  .section-item__block
+                    .section-item__block-title.text-red ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!
+                    .section-item__block-text.
+                      В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты
+                      штрафов настройте уведомления в Личном кабинете.
+            li.section-navigate__item(data-accordion-id="2")
+              .section-navigate__header
+                img.section-navigate__icon(src="images/icons/ic_fssp.svg" alt="")
+                a.section-navigate__link(href="#section-item-2") Судебные задолженности
+                span.section-navigate__arrow
+
+              .section-navigate__content(data-accordion-content="2")
+                .section-item__content
+                  .section-item__block
+                    .section-item__block-text.
+                      Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.
+                    .section-item__block-text.
+                      Вы можете указать реквизиты платежа самостоятельно, заполнив форму.
+                  .section-item__block
+                    .section-item__block-title.text-red Удобно!
+                    .section-item__block-text.
+                      Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. 
+                      Информацию о совершенных платежах сохраняйте в Личном кабинете.
+            li.section-navigate__item(data-accordion-id="3")
+              .section-navigate__header
+                img.section-navigate__icon(src="images/icons/ic_nalog.svg" alt="")
+                a.section-navigate__link(href="#section-item-3") Налоги
+                span.section-navigate__arrow
+
+              .section-navigate__content(data-accordion-content="3")
+                .section-item__content
+                  .section-item__block
+                    .section-item__block-text.
+                      Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.
+                  .section-item__block
+                    .section-item__block-title.text-red ВАЖНО!
+                    .section-item__block-text.
+                      Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.
+            li.section-navigate__item(data-accordion-id="4")
+              .section-navigate__header
+                img.section-navigate__icon(src="images/icons/ic_rr.svg" alt="")
+                a.section-navigate__link(href="#section-item-4") Услуги Росреестра
+                span.section-navigate__arrow
+
+              .section-navigate__content(data-accordion-content="4")
+                .section-item__content
+                  .section-item__block
+                    .section-item__block-text.
+                      В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.
+                  .section-item__block
+                    .section-item__block-title.text-red НЕТ КОДА?
+                    .section-item__block-text.
+                      Если у вас ещё нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.
+            li.section-navigate__item.section-navigate__item--empty
+              span.section-navigate__link.is--disabled и другие услуги
+
+    section.section-item.section(id="section-item-1" data-section)
+      .container
+        .section-item__inner
+          .section-item__content
+            h2.section-item__title Штрафы ГИБДД
+            .section-item__block
+              .section-item__block-text.
+                Для поиска укажите номера водительского удостоверения и свидетельства о
+                регистрации ТС или номер штрафа.
+              .section-item__block-text.
+                Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты
+                самостоятельно.
+            .section-item__block
+              .section-item__block-title.text-red ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!
+              .section-item__block-text.
+                В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты
+                штрафов настройте уведомления в Личном кабинете.
+          img.section-item__img(srcset="images/pic_block1.jpg 800w, images/pic_block12x.jpg 1200w" src="images/pic_block12x.jpg" alt="")
+
+    section.section-item.section(id="section-item-2" data-section)
+      .container
+        .section-item__inner
+          .section-item__content
+            h2.section-item__title Судебные задолженности
+            .section-item__block
+              .section-item__block-text.
+                Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.
+              .section-item__block-text.
+                Вы можете указать реквизиты платежа самостоятельно, заполнив форму.
+            .section-item__block
+              .section-item__block-title.text-red Удобно!
+              .section-item__block-text.
+                Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами.
+                Информацию о совершенных платежах сохраняйте в Личном кабинете.
+          img.section-item__img(srcset="images/pic_block2.jpg 800w, images/pic_block22x.jpg 1200w" src="images/pic_block22x.jpg" alt="")
+
+    section.section-item.section(id="section-item-3" data-section)
+      .container
+        .section-item__inner
+          .section-item__content
+            h2.section-item__title Налоги
+            .section-item__block
+              .section-item__block-text.
+                Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.
+            .section-item__block
+              .section-item__block-title.text-red ВАЖНО!
+              .section-item__block-text.
+                Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.
+          img.section-item__img(srcset="images/pic_block3.jpg 800w, images/pic_block32x.jpg 1200w" src="images/pic_block32x.jpg" alt="")
+
+    section.section-item.section(id="section-item-4" data-section)
+      .container
+        .section-item__inner
+          .section-item__content
+            h2.section-item__title Услуги Росреестра
+            .section-item__block
+              .section-item__block-text.
+                В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.
+            .section-item__block
+              .section-item__block-title.text-red НЕТ КОДА?
+              .section-item__block-text.
+                Если у вас ещё нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.
+          img.section-item__img(srcset="images/pic_block4.jpg 800w, images/pic_block42x.jpg 1200w" src="images/pic_block42x.jpg" alt="")
+
+    section.section-partners.section(data-section)
+      .container
+        .section-partners__inner
+          h2.section-partners__title С нами работают
+          ul.section-partners__list
+            li.section-partners__item
+              img.section-partners__img(src="images/icons/logo_partner1.svg" alt="logo partner 1")
+              p.section-partners__text Партнёр 1
+            li.section-partners__item
+              img.section-partners__img(src="images/icons/logo_partner2.svg" alt="logo partner 2")
+              p.section-partners__text Компания-партнер с длинным названием
+            li.section-partners__item
+              img.section-partners__img(src="images/icons/logo_partner3.svg" alt="logo partner 3")
+              p.section-partners__text Партнёр 3
+            li.section-partners__item
+              img.section-partners__img(src="images/icons/logo_partner4.svg" alt="logo partner 4")
+              p.section-partners__text Название партнёра 4
+            li.section-partners__item
+              img.section-partners__img(src="images/icons/logo_partner5.svg" alt="logo partner 5")
+              p.section-partners__text Компания-партнёра 5
+            li.section-partners__item
+              img.section-partners__img(src="images/icons/logo_partner6.svg" alt="logo partner 6")
+              p.section-partners__text Партнер 6 с длинным названием
+
+  include pug/includes/footer.pug

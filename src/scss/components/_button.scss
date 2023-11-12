@@ -1,0 +1,192 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 14.2rem;
+  height: 6rem;
+  padding: 2.1rem 3.2rem;
+  color: var(--white);
+  font-size: var(--font-size-24);
+  line-height: var(--line-height-32);
+  background: var(--red);
+  border-radius: var(--radius);
+  transform: translateY(0);
+  cursor: pointer;
+  transition: var(--transition-025);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.08rem;
+  }
+
+  &.btn-white {
+    color: var(--black);
+    font-size: 1.6rem;
+    background: var(--white);
+  }
+
+  &.btn-fullwidth {
+    justify-content: center;
+    width: 100%;
+  }
+
+  &.btn-rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &.btn-outlined {
+    color: var(--black);
+    background: transparent;
+    border: 1px solid var(--blue);
+  }
+
+  &.btn-wide {
+    width: 34rem;
+  }
+
+  &.btn-link {
+    border: none;
+  }
+
+  &.btn-sm {
+    padding: 1.5rem;
+    letter-spacing: 0;
+  }
+
+  &.btn-big {
+    gap: 0.8rem;
+    justify-content: center;
+    width: 30rem;
+    height: 6.8rem;
+    padding: 2.3rem 3rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.1em;
+    border-radius: 0.4rem;
+
+    @media screen and (max-width: 440px) {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  &.btn-up {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    padding: 0.3rem;
+    background: var(--white);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-1);
+
+    &--small {
+      width: 3.6rem;
+      height: 3.6rem;
+
+      .btn-up__icon {
+        width: 1.2rem;
+        height: 1.4rem;
+      }
+    }
+
+    &__icon {
+      width: 1.8rem;
+      height: 2.2rem;
+    }
+  }
+
+  &.btn-success {
+    color: var(--white);
+    background: var(--green);
+
+    .btn__icon {
+      width: 1.2rem;
+
+      path {
+        stroke: var(--white);
+      }
+    }
+  }
+}
+
+.selected-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  font-family: Bebas-Bold, sans-serif;
+  background: var(--white);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+
+  &.is--selected {
+    color: var(--white);
+    background: var(--green);
+  }
+}
+
+.cheeps-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7rem;
+  height: 3.2rem;
+  padding: 0 1rem;
+  color: var(--green);
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  text-transform: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+
+  &--blue {
+    color: var(--green);
+    background: var(--blue);
+  }
+
+  &--green {
+    color: var(--white);
+    background: var(--green);
+  }
+
+  &--darkgreen {
+    color: var(--white);
+    background: var(--green-dark);
+  }
+}
+
+.link {
+  width: max-content;
+  color: var(--black);
+
+  &--dotted {
+    border-bottom: 2px dotted var(--black);
+  }
+
+  &--grey {
+    color: var(--grey);
+  }
+
+  &--green {
+    color: var(--green);
+    border-color: var(--green);
+  }
+}

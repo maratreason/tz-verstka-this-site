@@ -1,0 +1,68 @@
+.modal {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  z-index: 0;
+  width: 40rem;
+  min-height: 20rem;
+  background: var(--white);
+  box-shadow: 2px 4px 22px rgba(#000, 0.15);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition-05);
+
+  &.active {
+    top: 50%;
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+    transition: var(--transition-05);
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &-inner {
+    position: relative;
+    padding: 4.5rem 4rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 5;
+    cursor: pointer;
+  }
+
+  &__block {
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+
+    &-text {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__form {
+    > * {
+        width: 100% !important;
+    }
+  }
+
+  &__submit {
+    margin-top: 3rem;
+  }
+
+  .link {
+    color: var(--blue);
+    border-bottom: 1px dotted var(--blue);
+
+    &:not(:last-child) {
+        margin-bottom: 1.7rem;
+    }
+  }
+}

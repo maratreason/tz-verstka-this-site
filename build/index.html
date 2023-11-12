@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&amp;display=swap">
+    <link href="css/main.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/svg+xml">
+    <title>This site</title>
+  </head>
+  <body id="top">
+    <div class="mobile-navigation" data-navbar>
+      <div class="mobile-navigation__block mobile-navigation__block--top"><img class="mobile-navigation__img" src="images/icons/logo_site-logo.svg" alt=""><span class="mobile-navigation__close" data-nav-toggler>&times;</span></div>
+      <div class="mobile-navigation__block mobile-navigation__block--menu">
+        <ul class="mobile-navigation__list">
+          <li class="mobile-navigation__item"><a class="mobile-navigation__link" href="#section-item-1" data-nav-link>Штрафы</a></li>
+          <li class="mobile-navigation__item"><a class="mobile-navigation__link" href="#section-item-2" data-nav-link>Судебные задолженности</a></li>
+          <li class="mobile-navigation__item"><a class="mobile-navigation__link" href="#section-item-3" data-nav-link>Налоги</a></li>
+          <li class="mobile-navigation__item"><a class="mobile-navigation__link" href="#section-item-4" data-nav-link>Услуги</a></li>
+          <li class="mobile-navigation__item"><a class="mobile-navigation__link" href="#" data-nav-link>О компании</a></li>
+          <li class="mobile-navigation__item"><a class="mobile-navigation__link" href="#" data-nav-link>Контакты</a></li>
+        </ul>
+        <ul class="mobile-navigation__list mobile-navigation__list">
+          <li class="mobile-navigation__item">
+            <div class="mobile-navigation__link" data-modal-trigger data-nav-link>Войти</div>
+          </li>
+          <li class="mobile-navigation__item">
+            <div class="mobile-navigation__link" data-modal-trigger data-nav-link>Зарегистрироваться</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal" data-modal>
+      <div class="modal__close" data-modal-close><img class="modal__close-img" src="images/icons/ic_close.png" alt="close icon"></div>
+      <div class="modal-inner">
+        <h2 class="modal__title">Введите логин и пароль для входа в Личный кабинет</h2>
+        <div class="modal__block">
+          <form class="modal__form form">
+            <div class="form-group">
+              <label class="form__label"></label>
+              <input class="form__input input" type="text" placeholder="Логин">
+            </div>
+            <div class="form-group">
+              <label class="form__label"></label>
+              <input class="form__input input" type="text" placeholder="Пароль">
+            </div>
+            <button class="modal__submit btn btn-primary" type="submit">Войти</button>
+          </form>
+        </div>
+        <div class="modal__block"><a class="link" href="#password">Напомнить пароль</a><a class="link" href="#registration">Регистрация</a></div>
+      </div>
+    </div>
+    <div class="backdrop" data-overlay></div>
+    <div class="backdrop-modal" data-backdrop></div>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header__inner" data-header>
+          <div class="burger-btn" data-nav-toggler><span></span><span></span><span></span></div><a class="header__logo" href="#"><img src="images/icons/logo_site-logo.svg" alt=""></a>
+          <button class="header__help" type="button" data-tooltip><img src="images/icons/ic_help.svg" alt="">
+            <div class="tooltip"><span class="tooltip__triangle"></span>
+              <div class="tooltip__content">
+                <p class="tooltip__text">Тел. поддержка</p>
+                <p class="tooltip__title">8 800 123-45-67</p><a class="tooltip__link" href="#">Написать письмо</a>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main" id="main">
+      <section class="section-hero" data-section>
+        <div class="container">
+          <div class="section-hero__inner">
+            <form class="section-hero__form form">
+              <div class="form-group">
+                <label class="form__label">Поиск начислений</label>
+                <input class="form__input input" type="text" placeholder="Введите данные для поиска"><img class="form__search-icon" src="images/icons/ic_search.svg" alt="">
+              </div>
+              <button class="form__btn btn btn-red">Найти</button>
+            </form>
+            <p class="section-hero__text">Чем больше параметров введено, тем полнее результаты поиска</p>
+          </div>
+        </div>
+      </section>
+      <section class="section-navigate" data-section>
+        <div class="container">
+          <div class="section-navigate__inner">
+            <h1 class="section-navigate__title"><span class="section-navigate__title-desctop">Здесь можно оплатить</span><span class="section-navigate__title-mobile">Узнайте как оплатить</span></h1>
+            <ul class="section-navigate__list" data-accordion>
+              <li class="section-navigate__item" data-accordion-id="1">
+                <div class="section-navigate__header"><img class="section-navigate__icon" src="images/icons/ic_gibdd1.svg" alt=""><a class="section-navigate__link" href="#section-item-1">Штрафы ГИБДД</a><span class="section-navigate__arrow"></span></div>
+                <div class="section-navigate__content" data-accordion-content="1">
+                  <div class="section-item__content">
+                    <div class="section-item__block">
+                      <div class="section-item__block-text">
+                        Для поиска укажите номера водительского удостоверения и свидетельства о
+                        регистрации ТС или номер штрафа.
+                      </div>
+                      <div class="section-item__block-text">
+                        Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты
+                        самостоятельно.
+                      </div>
+                    </div>
+                    <div class="section-item__block">
+                      <div class="section-item__block-title text-red">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
+                      <div class="section-item__block-text">
+                        В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты
+                        штрафов настройте уведомления в Личном кабинете.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-navigate__item" data-accordion-id="2">
+                <div class="section-navigate__header"><img class="section-navigate__icon" src="images/icons/ic_fssp.svg" alt=""><a class="section-navigate__link" href="#section-item-2">Судебные задолженности</a><span class="section-navigate__arrow"></span></div>
+                <div class="section-navigate__content" data-accordion-content="2">
+                  <div class="section-item__content">
+                    <div class="section-item__block">
+                      <div class="section-item__block-text">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</div>
+                      <div class="section-item__block-text">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</div>
+                    </div>
+                    <div class="section-item__block">
+                      <div class="section-item__block-title text-red">Удобно!</div>
+                      <div class="section-item__block-text">
+                        Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами. 
+                        Информацию о совершенных платежах сохраняйте в Личном кабинете.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-navigate__item" data-accordion-id="3">
+                <div class="section-navigate__header"><img class="section-navigate__icon" src="images/icons/ic_nalog.svg" alt=""><a class="section-navigate__link" href="#section-item-3">Налоги</a><span class="section-navigate__arrow"></span></div>
+                <div class="section-navigate__content" data-accordion-content="3">
+                  <div class="section-item__content">
+                    <div class="section-item__block">
+                      <div class="section-item__block-text">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</div>
+                    </div>
+                    <div class="section-item__block">
+                      <div class="section-item__block-title text-red">ВАЖНО!</div>
+                      <div class="section-item__block-text">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-navigate__item" data-accordion-id="4">
+                <div class="section-navigate__header"><img class="section-navigate__icon" src="images/icons/ic_rr.svg" alt=""><a class="section-navigate__link" href="#section-item-4">Услуги Росреестра</a><span class="section-navigate__arrow"></span></div>
+                <div class="section-navigate__content" data-accordion-content="4">
+                  <div class="section-item__content">
+                    <div class="section-item__block">
+                      <div class="section-item__block-text">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</div>
+                    </div>
+                    <div class="section-item__block">
+                      <div class="section-item__block-title text-red">НЕТ КОДА?</div>
+                      <div class="section-item__block-text">Если у вас ещё нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.</div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="section-navigate__item section-navigate__item--empty"><span class="section-navigate__link is--disabled">и другие услуги</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section-item section" id="section-item-1" data-section>
+        <div class="container">
+          <div class="section-item__inner">
+            <div class="section-item__content">
+              <h2 class="section-item__title">Штрафы ГИБДД</h2>
+              <div class="section-item__block">
+                <div class="section-item__block-text">
+                  Для поиска укажите номера водительского удостоверения и свидетельства о
+                  регистрации ТС или номер штрафа.
+                </div>
+                <div class="section-item__block-text">
+                  Если у вас есть на руках постановление о штрафе, вы можете указать реквизиты
+                  самостоятельно.
+                </div>
+              </div>
+              <div class="section-item__block">
+                <div class="section-item__block-title text-red">ПЛАТИТЬ ВОВРЕМЯ — ДЕШЕВЛЕ!</div>
+                <div class="section-item__block-text">
+                  В первые 20 дней после выдачи постановления штраф можно оплатить со скидкой 50%. Для своевременной оплаты
+                  штрафов настройте уведомления в Личном кабинете.
+                </div>
+              </div>
+            </div><img class="section-item__img" srcset="images/pic_block1.jpg 800w, images/pic_block12x.jpg 1200w" src="images/pic_block12x.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="section-item section" id="section-item-2" data-section>
+        <div class="container">
+          <div class="section-item__inner">
+            <div class="section-item__content">
+              <h2 class="section-item__title">Судебные задолженности</h2>
+              <div class="section-item__block">
+                <div class="section-item__block-text">Для поиска начислений в ГИС ГМП укажите документы: паспорт РФ, ИНН, СНИЛС или номер Исполнительного производства.</div>
+                <div class="section-item__block-text">Вы можете указать реквизиты платежа самостоятельно, заполнив форму.</div>
+              </div>
+              <div class="section-item__block">
+                <div class="section-item__block-title text-red">Удобно!</div>
+                <div class="section-item__block-text">
+                  Судебные задолженности можно погасить как сразу, так и по частям, комфортными для вас платежами.
+                  Информацию о совершенных платежах сохраняйте в Личном кабинете.
+                </div>
+              </div>
+            </div><img class="section-item__img" srcset="images/pic_block2.jpg 800w, images/pic_block22x.jpg 1200w" src="images/pic_block22x.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="section-item section" id="section-item-3" data-section>
+        <div class="container">
+          <div class="section-item__inner">
+            <div class="section-item__content">
+              <h2 class="section-item__title">Налоги</h2>
+              <div class="section-item__block">
+                <div class="section-item__block-text">Для поиска начислений по налогам в ГИС ГМП укажите ИНН или Индекс налогового документа, если у вас на руках есть квитанция.</div>
+              </div>
+              <div class="section-item__block">
+                <div class="section-item__block-title text-red">ВАЖНО!</div>
+                <div class="section-item__block-text">Согласно законодательству РФ вы не можете оплачивать налоги за других физических лиц. Принимаются только платежи физических лиц.</div>
+              </div>
+            </div><img class="section-item__img" srcset="images/pic_block3.jpg 800w, images/pic_block32x.jpg 1200w" src="images/pic_block32x.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="section-item section" id="section-item-4" data-section>
+        <div class="container">
+          <div class="section-item__inner">
+            <div class="section-item__content">
+              <h2 class="section-item__title">Услуги Росреестра</h2>
+              <div class="section-item__block">
+                <div class="section-item__block-text">В поисковой строке укажите Код платежа, который был отправлен вам на почтовый ящик, указанный при подаче запроса в Росреестре.</div>
+              </div>
+              <div class="section-item__block">
+                <div class="section-item__block-title text-red">НЕТ КОДА?</div>
+                <div class="section-item__block-text">Если у вас ещё нет кода платежа, перейдите на сайт rosreestr.ru и сформируйте запрос на оплату электронных услуг Росреестра.</div>
+              </div>
+            </div><img class="section-item__img" srcset="images/pic_block4.jpg 800w, images/pic_block42x.jpg 1200w" src="images/pic_block42x.jpg" alt="">
+          </div>
+        </div>
+      </section>
+      <section class="section-partners section" data-section>
+        <div class="container">
+          <div class="section-partners__inner">
+            <h2 class="section-partners__title">С нами работают</h2>
+            <ul class="section-partners__list">
+              <li class="section-partners__item"><img class="section-partners__img" src="images/icons/logo_partner1.svg" alt="logo partner 1">
+                <p class="section-partners__text">Партнёр 1</p>
+              </li>
+              <li class="section-partners__item"><img class="section-partners__img" src="images/icons/logo_partner2.svg" alt="logo partner 2">
+                <p class="section-partners__text">Компания-партнер с длинным названием</p>
+              </li>
+              <li class="section-partners__item"><img class="section-partners__img" src="images/icons/logo_partner3.svg" alt="logo partner 3">
+                <p class="section-partners__text">Партнёр 3</p>
+              </li>
+              <li class="section-partners__item"><img class="section-partners__img" src="images/icons/logo_partner4.svg" alt="logo partner 4">
+                <p class="section-partners__text">Название партнёра 4</p>
+              </li>
+              <li class="section-partners__item"><img class="section-partners__img" src="images/icons/logo_partner5.svg" alt="logo partner 5">
+                <p class="section-partners__text">Компания-партнёра 5</p>
+              </li>
+              <li class="section-partners__item"><img class="section-partners__img" src="images/icons/logo_partner6.svg" alt="logo partner 6">
+                <p class="section-partners__text">Партнер 6 с длинным названием</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__inner">
+          <div class="footer__block">
+            <div class="footer__text">© 2012 – 2020</div>
+            <div class="footer__text">ООО «Название компании»</div>
+          </div><img class="footer__icon" src="images/icons/comodossl-trustlogo2.png" alt="">
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
